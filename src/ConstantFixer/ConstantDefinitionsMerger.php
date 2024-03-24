@@ -29,7 +29,8 @@ class ConstantDefinitionsMerger
     public function __construct(
         private array $constDefinitionMaps,
         private string|int $reference = 0,
-    ) {}
+    ) {
+    }
 
     /**
      * merge constDefinitionMaps into one string->constdef map

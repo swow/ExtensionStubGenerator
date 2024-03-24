@@ -22,5 +22,6 @@ class ConstantDefinition extends stdClass
     public function __construct(
         public int $value,
         public string $comment = '',
-    ) {}
+    ) {
+    }
 }
