@@ -29,8 +29,8 @@ abstract class SimpleNodeTraverserAbstract extends NodeVisitorAbstract
         switch (true) {
             case $node instanceof Node\Stmt\Namespace_:
                 // entering namespace
-                if ($node->name && $node->name->parts) {
-                    $this->namespace = implode('\\', $node->name->parts);
+                if ($node->name && $node->name->name) {
+                    $this->namespace = $node->name->name;
                 } else {
                     $this->namespace = static::GLOBAL_NAMESPACE_MAGIC;
                 }
